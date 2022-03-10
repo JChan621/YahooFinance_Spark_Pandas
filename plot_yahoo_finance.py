@@ -8,6 +8,8 @@ Created by Fourier
 Disclaimer: This is for personal interest and has no connections with Yahoo Finance or any stock provider.
 Use of the data is at your own risk. 
 I assume no responsibility for, and offer no warranties or representations regarding, the accuracy, reliability, completeness or timeliness of any of the content.
+
+#To add: labels of the plots 
 """
 import datetime
 
