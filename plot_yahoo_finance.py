@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
 
-This is a temporary script file.
+
+Created on March 10 2022 
+Created by Fourier
 """
 import datetime
-
 
 import requests
 import pandas as pd
@@ -27,7 +27,7 @@ def retrieve_ticker_history(ticker : str):
     ticker_df['close'].iloc[-500:].plot(figsize=(10,6))
     ticker_df['close'].rolling(window = 250).mean().iloc[-500:].plot()
     ticker_df['close'].rolling(window = 50).mean().iloc[-500:].plot()
-    ticker_df['close'].rolling(window = 20).mean().iloc[-500:].plot(y = 'close')
+    ticker_df['close'].rolling(window = 20).mean().iloc[-500:].plot()
     print("Currently trading at: " + str(ticker_info['chart']['result'][0]['meta']["regularMarketPrice"]))
 if __name__ == '__main__':
     ticker = input('Enter a ticker: ')
