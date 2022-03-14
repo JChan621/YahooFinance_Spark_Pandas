@@ -51,7 +51,7 @@ def retrieve_ticker_history(ticker : str):
     ticker_df = ticker_df.withColumn('20_days_average', func.avg("close").over(windowSpec_20))
     windowSpec_250 = Window.orderBy(func.col("Timestamp").cast('long')).rangeBetween(-days(365), 0) #Taking 365 days as a 250 trading days moving average
     ticker_df = ticker_df.withColumn('250_days_average', func.avg("close").over(windowSpec_250))
-    display(ticker_df.tail(500),1)#Doesn't work outside spark kernel notebook
+    display(ticker_df.tail(500))#Doesn't work outside spark kernel notebook
 
 ticker = 'aapl'
 retrieve_ticker_history(ticker)
